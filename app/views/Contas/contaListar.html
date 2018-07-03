@@ -1,0 +1,59 @@
+#{extends 'main.html' /}
+#{set title:'Listar Clientes' /}
+
+
+<div class="card mb-3 container">
+<meta charset="UTF-8"/>
+ <div class="card-header">
+   <i class="fa fa-table"></i> Listagem de Contas</div>
+ <div class="card-body">
+    
+     <table class="table dataTable" id="dataTable">
+       <thead>
+         <tr><th rowspan="1" colspan="1">ID</th>
+         <th rowspan="1" colspan="1">Número Conta</th>
+   <!--  <th rowspan="1" colspan="1">Cliente</th> -->
+         <th rowspan="1" colspan="1">Recarga</th>
+         <th rowspan="1" colspan="1">Saldo</th>
+         <th rowspan="1" colspan="1">Pagamento</th>
+         <th>Ações</th>
+       </thead>
+       <tbody>
+     
+	#{list items:contas, as:'conta'}
+		<tr role="row">
+
+           <td>${conta.id}</td>
+           <td>${conta.numeroConta}</td>
+           <td>${conta.recarga}</td>
+           <td>${conta.saldo}</td>
+           <td>${conta.pagamento}</td>
+           
+           <td>
+           		<a href="@{Contas.editar(conta.id)}">Editar</a> 
+           	  	<a href="@{Contas.remover(conta.id)}">Remover</a>
+           	</td>
+         </tr>
+	#{/list}
+	
+	
+	
+	</tbody>
+    </table>
+    
+    <div class="row">
+		<div class="form-group col-md-2">
+			<a href="@{Contas.formConta}" class="btn btn-success btn-block">Fazer Recarga</a>
+		</div>
+
+		<div class="form-group col-md-2">
+			<a href="@{Application.index}" class="btn btn-danger btn-block">Sair</a>
+		</div>
+	</div>
+    
+  </div>
+</div>
+
+	
+  
+  
