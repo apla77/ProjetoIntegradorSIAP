@@ -1,6 +1,7 @@
 package models;
 
-import java.sql.Date;
+import java.util.Date;
+
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -30,7 +31,7 @@ public class Cliente extends Model {
 	@Required
 	public String senha;
 	
-    @Required
+  //  @Required
   //	@Temporal(TemporalType.DATE)
 	public Date dataNasc;
 	
