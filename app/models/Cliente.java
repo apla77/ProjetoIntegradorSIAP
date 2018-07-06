@@ -30,7 +30,7 @@ public class Cliente extends Model {
 	@Required
 	public String senha;
 	
-    @Required
+  //  @Required
   //	@Temporal(TemporalType.DATE)
 	public Date dataNasc;
 	
