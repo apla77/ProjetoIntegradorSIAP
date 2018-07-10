@@ -69,5 +69,11 @@ public class Clientes extends Controller{
 		List<Cliente> clientes = Cliente.find("nome like ? or email like ?", "%" + busca + "%", "%" + busca + "%").fetch();
 		renderTemplate("Clientes/listar.html", clientes);
 	}
+	public static void fotoCliente(Long id) {
+		Cliente cliente = Cliente.findById(id);
+		notFoundIfNull(cliente);
+		response.setContentTypeIfNotSet(cliente.foto.type());
+		renderBinary(cliente.foto.get());
+	}
 
 }

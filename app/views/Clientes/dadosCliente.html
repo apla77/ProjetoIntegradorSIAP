@@ -11,6 +11,19 @@
 				enctype="multipart/form-data">
 
 				<input type="hidden" name="cliente.id" value="${cliente?.id}">
+				
+				#{if cliente?.foto?.exists()}
+		   	<img height="150px" width="150px" src="@{Clientes.fotoCliente(cliente.id)}"><br>
+		   	<div class="form-group">
+	            <div class="form-check">
+	              <label class="form-check-label">
+	              	<input class="form-check-input" type="checkbox" name="excluirFoto">Excluir Imagem
+	              </label>
+	            </div>
+	        </div>
+		   #{/if}
+		   <br>
+				<input type="file" value="${cliente?.foto}" name="cliente.foto">
 				<div class="form-group">
 					<div class="form-row">
 						<div class="col-md-12">

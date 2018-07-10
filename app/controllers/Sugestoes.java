@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.List;
 
+import models.Cliente;
 import models.Sugestao;
 import play.data.validation.Valid;
 import play.mvc.Controller;
@@ -24,7 +25,12 @@ public class Sugestoes extends Controller{
 			
 		sugestao.save();
 		flash.success("Mensagem enviada!");
-		listSugestao();
+		String busca = "admin";
+		List<Cliente> clientes = Cliente.find("nome like ? or email like ?", "%" + busca + "%", "%" + busca + "%").fetch();
+		if(busca.equals("admin"))
+			listagemOperador();
+		else
+			listSugestao();
 	}
 	
 	

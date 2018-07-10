@@ -2,44 +2,70 @@
 #{set title:'Home Operador' /}
 
 
-<<<<<<< HEAD
-<div class="container">
-      <div class="card card-register mx-auto mt-5">
 
-
-	<div class="card-header">
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card">
 		<meta charset="UTF-8" />
-		<i class="fa fa-credit-card"></i> Recarga
+	<div class="card bg-info text-white text-center" style="font-size:36px" >
+
+		Compra de Refeição
 	</div>
 	<div class="card-body">
 
 		<form action="@{Contas.salvar}" method="post">
-        
+
 			<input type="hidden" value="${conta?.id}" name="conta.id">
 
-			<div class="row">
 				<div class="form-group col-md-12">
+					<label for="numeroConta">Número da Conta</label> 
+					<input class="form-control" id="numeroConta" type="text"  value="${conta?.numeroConta}" name="conta.numeroConta">
+				</div>
 
-			<label for="numeroConta">Número da Conta</label> 
-			 <input class="form-control" id="numeroConta" type="text" readonly value="${conta?.numeroConta}" name="conta.numeroConta">
-	
+				<div class="form-group col-md-12"><label for="nome">Cliente</label> 
+				<input class="form-control" id="cliConta" type="text"  value="${cliente?.nome}" name="conta.cliConta">
+				</div>
+				
+				
+				
+				
 
-				<label for="nome">Cliente</label> 
-				<input class="form-control" id="cliConta" type="text" readonly value="${cliente?.nome}" name="conta.cliConta">
+			<div class="row">
+				<div class="form-group col-md-4">
+					<input class="btn btn-success btn-block" type="submit"
+						value="Confirmar">
+				</div>
 
+				<div class="form-group col-md-4">
+					<input class="btn btn-danger btn-block" type="submit"
+						value="Cancelar">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+</div>
 
-=======
-      <!-- Breadcrumbs-->
-     <meta charset="utf-8"> 
-      <ol class="breadcrumb">
-         <li class="breadcrumb-item active">Tela Operador</li>
-      </ol>
-      <div class="container">
-      <div class="row">
-      <div class="card card-register mx-auto mt-12">
-            <ol class="breadcrumb">
-         <li class="breadcrumb-item active">Recarga</li>
-      </ol>
+<div class="col-sm-3 ">
+    <div class="card ">
+	<div class="text-center"  >
+    
+
+     Pau dos Ferros - RN    
+
+	</div>
+</div>
+</div>
+
+ <div class="col-sm-4">
+    <div class="card">
+    
+
+	<div class="card bg-success text-white text-center" style="font-size:36px" >
+		Recarga
+	</div>
+	<div class="card-body">
+
 		<form action="@{Contas.salvar}" method="post">
 
 			<input type="hidden" value="${conta?.id}" name="conta.id">
@@ -54,7 +80,6 @@
 				</div>
 				
 				<div class="col-md-12">
->>>>>>> b012a9b9cc35b645954adbdeecaf6769be9f7b80
 				 <label for="conta">Valor da recarga</label> 
 					<select id="recarga" name="conta.recarga" class="form-control">				  
 						<option value="0"></option>
@@ -62,82 +87,40 @@
 						<option value="20">20</option>
 						<option value="30">30</option>
 					</select>
-<<<<<<< HEAD
-
-=======
 				</div>
 				
+				<div class="form-group col-md-12"><label for="saldo">Saldo atual</label> 
+				<input class="form-control" id="saldo" type="text" readonly value="${conta?.saldo}" name="conta.saldo">
+				 
+				</div>
+
 				<div class="col-md-12">
->>>>>>> b012a9b9cc35b645954adbdeecaf6769be9f7b80
 					<label for="pagamento">Forma de pagamento</label> 
 					<select id="pagamento" name="conta.pagamento" class="form-control">				 
 						<option value="a vista">A vista</option>
 						<option value="cartao">Cartão</option>
 						<option value="boleto">Boleto</option>
-					</select>
-<<<<<<< HEAD
-			</div>
-	        </div>
-			</div>
-			<div class="row" >
-				<div class="form-group col-md-3">
+					</select></br>
+				</div>
+				
+				
+
+			<div class="row">
+				<div class="form-group col-md-4">
 					<input class="btn btn-success btn-block" type="submit"
 						value="Confirmar">
 				</div>
-				<div class="form-group col-md-6">
-					<input class="btn btn-danger outline-light" type="submit" 
-=======
-				</div></br>
 
-			<div class="row">
-				<div class="form-group col-md-6">
-					<input class="btn btn-success btn-block" type="submit"	value="OK">
-				</div>
-
-				<div class="form-group col-md-6">
-					<input class="btn btn-danger btn-block" type="submit" value="Cancelar">
-				</div>
-			</div>
-		</form>
-	</div>
-      
-      <div class="card card-register mx-auto mt-12">
-             <ol class="breadcrumb">
-         <li class="breadcrumb-item active">Refeição</li>
-      </ol>
-		<form action="@{Contas.salvar}" method="post">
-
-			<input type="hidden" value="${conta?.id}" name="conta.id">
-
-				<div class="form-group col-md-12">
-					<label for="numeroConta">Número da Conta</label> 
-					<input class="form-control" id="numeroConta" type="text" readonly value="${conta?.numeroConta}" name="conta.numeroConta">
-				</div>
-
-				<div class="form-group col-md-12"><label for="nome">Cliente</label> 
-				<input class="form-control" id="cliConta" type="text" readonly value="${cliente?.nome}" name="conta.cliConta">
-				</div>
-				
-			<div class="row">
-				<div class="form-group col-md-6">
-					<input class="btn btn-success btn-block" type="submit"
-						value="OK">
-				</div>
-
-				<div class="form-group col-md-6">
+				<div class="form-group col-md-4">
 					<input class="btn btn-danger btn-block" type="submit"
->>>>>>> b012a9b9cc35b645954adbdeecaf6769be9f7b80
 						value="Cancelar">
 				</div>
 			</div>
 		</form>
 	</div>
-<<<<<<< HEAD
 </div>
 </div>
 </div>
 
-=======
-	</div>
-	</div>
->>>>>>> b012a9b9cc35b645954adbdeecaf6769be9f7b80
+
+

@@ -6,6 +6,10 @@
  <div class="card-header">
    <i class="fa fa-table"></i> Listagem de Cliente</div>
  <div class="card-body">
+ 
+    #{if cliente.foto?.exists()}
+  	    <img height="150px" width="150px" src="@{Professores.fotoCliente(cliente.id)}"><br>
+    #{/if}
     
      <table class="table dataTable" id="dataTable">
        <thead>
