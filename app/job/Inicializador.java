@@ -11,12 +11,6 @@ public class Inicializador extends Job{
 
 	@Override
 	public void doJob() throws Exception {
-	//	if(Usuario.count() == 0){
-	//		Usuario usuario = new Usuario();
-	//		usuario.login = "admin";
-	//		usuario.senha = "admin";
-	//		usuario.save();
-	//	}
 		 
 		if(Cliente.count() == 0){
 			Cliente usuario = new Cliente();

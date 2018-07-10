@@ -59,26 +59,10 @@ public class Clientes extends Controller{
 		renderTemplate("Application/index.html", cliente);
 	} 
 	
-	public static void editar(Long id) {
-		Cliente cliente = Cliente.findById(id);
-		renderTemplate("Clientes/dadosCliente.html", cliente);
-	}
-	
 	public static void detalhes(Cliente cliente) {
 		render(cliente); 
 	}
 	
-	public static void listar() {
-		List<Cliente> clientes = Cliente.findAll();
-		render(clientes); 
-	}
-	
-	public static void remover(Long id) {
-		Cliente cliente = Cliente.findById(id);
-		cliente.delete();
-		flash.success("Cliente removido com sucesso!");
-		listar();
-	}
 	
 	public static void buscar(String busca) {
 		System.out.println(busca);

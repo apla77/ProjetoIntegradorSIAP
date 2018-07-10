@@ -9,7 +9,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import net.sf.oval.constraint.Email;
+import play.data.validation.Email;
 import play.data.validation.Required;
 import play.db.jpa.Blob;
 import play.db.jpa.Model;
@@ -31,8 +31,8 @@ public class Cliente extends Model {
 	@Required
 	public String senha;
 	
-  //  @Required
-  //	@Temporal(TemporalType.DATE)
+   // @Required
+  	//@Temporal(TemporalType.DATE)
 	public Date dataNasc;
 	
 	public Blob foto;

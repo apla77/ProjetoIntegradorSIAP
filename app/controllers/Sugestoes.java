@@ -37,6 +37,11 @@ public class Sugestoes extends Controller{
 		render(sugestoes);
 	}
 	
+	public static void listagemOperador() {
+		List<Sugestao> sugestoes = Sugestao.findAll();
+		render(sugestoes);
+	}
+	
 	public static void remover(Long id) {
 		Sugestao sugestao = Sugestao.findById(id);
 		flash.success("Mensagem Removida!");

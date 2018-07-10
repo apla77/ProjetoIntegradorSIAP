@@ -1,5 +1,5 @@
-#{extends 'main.html' /}
-#{set title:'Lista de Sugestões' /}
+#{extends 'mainOperador.html' /}
+#{set title:'Lista de Sugestões operador' /}
 
 
 <div class="card mb-3 container">
@@ -13,27 +13,23 @@
          <tr>
           <th rowspan="1" colspan="1">Cliente</th>
           <th rowspan="1" colspan="1">Sugestões</th>
-          
-          
+        
        </thead>
        <tbody>
 	#{list items:sugestoes, as:'sugestao'}
 		<tr role="row">
            <td>${sugestao.id}</td>
            <td>${sugestao.sugestao}</td>
+           
          </tr>
 	#{/list}
 	</tbody>
     </table>
     <div class="row">
-		<div class="form-group col-md-2">
-			<a href="@{Sugestoes.formSugestao}" class="btn btn-success btn-block">Fazer Comentário</a>
-		</div>
 
-		<div class="form-group col-md-2">
-			<a href="@{Application.index}" class="btn btn-danger btn-block">Sair</a>
+		<div class="form-group c ol-md-7">
+			<a href="@{Operadores.operador}" class="btn btn-danger btn-block">Tela Inicial</a>
 		</div>
 	</div>
   </div>
 </div>
-
