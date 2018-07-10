@@ -39,12 +39,10 @@ public class Logins extends Controller{
 			Application.index(); 
 		}
 	}
-/*	
+	
 	public static void logout() {
 		session.clear();
 		System.out.println("logout");
 		login();
 	}
-*/
-
 }
